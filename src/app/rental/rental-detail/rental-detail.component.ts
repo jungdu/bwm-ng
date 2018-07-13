@@ -11,7 +11,7 @@ import { Rental } from '../shared/rental.model';
 export class RentalDetailComponent implements OnInit {
 
   currentId:string;
-  rental: Rental = new Rental();
+  rental: Rental;
 
   constructor(private route: ActivatedRoute,
               private rentalService: RentalService) { }
