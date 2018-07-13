@@ -1,5 +1,5 @@
 export class Rental{
-    id: string;
+    _id: string;
     title: string;
     city: string;
     street: string;
@@ -12,7 +12,7 @@ export class Rental{
     createdAt: string;
 
     constructor(){
-        this.id="";
+        this._id="";
         this.title="";
         this.city="";
         this.street="";
