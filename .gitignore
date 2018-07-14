@@ -44,3 +44,7 @@ testem.log
 Thumbs.db
 
 /server/config/dev.js
+/server/.vscode
+
+# API_KEY
+/src/app/common/map/map.module.ts
