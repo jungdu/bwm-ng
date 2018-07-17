@@ -7,10 +7,11 @@ const bodyParser = require('body-parser');
 
 const rentalRoutes = require('./routes/rentals');
 const userRoutes = require('./routes/users');
+const bookingRoutes = require('./routes/booking');
 
 mongoose.connect(config.DB_URI, { useNewUrlParser: true }).then(()=>{
     const fakeDb = new FakeDb();
-    fakeDb.seedDb();
+    //fakeDb.seedDb();
 });
 
 const app = express();
@@ -18,7 +19,8 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use('/api/v1/rentals', rentalRoutes);
-app.use('/api/v1/users', userRoutes)
+app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/booking', bookingRoutes);
 
 app.get('/rentals', function(req, res){
     res.json({"success":true});
